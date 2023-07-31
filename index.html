@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+    #navlogo{
+        color: rgb(255, 196, 0);
+        font-family: Gabriola;
+        font-size: 2em;
+        font-style: italic;
+    }
+    .navbar ul li{
+        letter-spacing: 2px;
+        padding: 0px 5px;
+    }
+    #home{
+        background-image: url(home.jpg);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        height: 100vh;
+    }
+    #home h2{
+        padding-top: 250px;
+        font-size: 2.5em;
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        box-sizing: border-box;
+    }
+    #home h1{
+        box-sizing: border-box☻;
+        padding-top: 20px;
+        font-size: 4.5em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+    #homebtn{
+width: 220px;
+height: 75px;
+font-weight: 700;
+    }
+    #services{
+        height: 600px;
+    }
+    #services h1{
+        font-size: 2.8em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        padding-top: 100px;
+    }
+    #svcsp1{
+color: rgb(121, 121, 121);
+font-style: italic;
+font-size: 1.2em;
+font-weight: 400;
+padding-bottom: 30px;
+    }
+    #ecomicon{
+        padding: 25px 30px;
+        background-color: rgb(255, 196, 0);
+        border-radius: 50%;
+    }
+    #respicon{
+        padding: 25px 26px;
+        background-color: rgb(255, 196, 0);
+        border-radius: 50%;
+    }
+    #secicon{
+        padding: 25px 35px;
+        background-color: rgb(255, 196, 0);
+        border-radius: 50%;
+    }
+    #services h2{
+        padding-top: 15px;
+        font-size: 1.6em;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 10px;
+    }
+    #svcp1{
+    color: rgb(121, 121, 121);
+    font-weight: 600;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+    .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: rgb(255, 196, 0);
+}
+#portfolio{
+    height: 1100px;
+    padding: 0px 0px 0px;
+}
+#portfolio h1{
+        font-size: 2.8em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        padding-top: 100px;
+    }
+    #svcsp1{
+color: rgb(121, 121, 121);
+font-style: italic;
+font-size: 1.2em;
+font-weight: 400;
+padding-bottom: 30px;
+    }
+    .card{
+        margin-top: 20px;
+    }
+    #about{
+    height: 1850px;
+    padding: 0px 0px 0px;
+}
+#about h1{
+        font-size: 2.8em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        padding-top: 100px;
+    }
+    .timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+.timeline:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  margin-left: -1.5px;
+  content: "";
+  background-color: #e9ecef;
+}
+.timeline > li {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 50px;
+}
+.timeline > li:after, .timeline > li:before {
+  display: table;
+  content: " ";
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li .timeline-panel {
+  position: relative;
+  float: right;
+  width: 100%;
+  padding: 0 20px 0 100 px;
+  text-align: left;
+}
+.timeline > li .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+.timeline > li .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+.timeline > li .timeline-image {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  margin-left: 0;
+  text-align: center;
+  color: white;
+  border: 7px solid #e9ecef;
+  border-radius: 100%;
+  background-color: #ffc800;
+}
+.timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 12px;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  padding: 0 20px 0 100px;
+  text-align: left;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+.timeline > li:last-child {
+  margin-bottom: 0;
+}
+.timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline .timeline-heading h4.subheading, .timeline .timeline-heading .subheading.h4 {
+  text-transform: none;
+}
+.timeline .timeline-body > ul,
+.timeline .timeline-body > p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline > li {
+    min-height: 100px;
+    margin-bottom: 100px;
+  }
+  .timeline > li .timeline-panel {
+    float: left;
+    width: 41%;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+  }
+  .timeline > li .timeline-image {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+  }
+  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    padding: 0 30px 20px 20px;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .timeline > li {
+    min-height: 150px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px;
+  }
+  .timeline > li .timeline-image {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+  }
+  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 30px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 20px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .timeline > li {
+    min-height: 170px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px 100px;
+  }
+  .timeline > li .timeline-image {
+    width: 170px;
+    height: 170px;
+    margin-left: -85px;
+  }
+  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
+    margin-top: 40px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 100px 20px 20px;
+  }
+}
+
+#team{
+    height: 750px;
+    padding: 0px 0px 0px;
+}
+#team h1{
+        font-size: 2.8em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        padding-top: 100px;
+    }
+    #teamimg{
+        width: 220px;
+        height: 220px;
+        border: 7px solid rgb(187, 187, 187);
+        margin-bottom: 10px;
+    }
+    #teamtwitter{
+        background-color: black;
+        color: white;
+        padding: 10px 10px;
+        border-radius: 50%;
+        transition: .2s;
+        border: 1px solid black;
+        font-size: 20px;
+    }
+    #teamtwitter2{
+        background-color: black;
+        color: white;
+        padding: 10px 10px;
+        border-radius: 50%;
+        transition: .2s;
+        border: 1px solid black;
+        font-size: 20px;
+        margin-left: 120px;
+    }
+    #teamfb{
+        background-color: black;
+        font-size: 20px;
+        color: white;
+        padding: 10px 14px;
+        border-radius: 50%;
+        transition: .2s;
+        border: 1px solid black;
+        margin: 0px 10px;
+    }
+    #teamlinkedin{
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        padding: 10px 11px;
+        border-radius: 50%;
+        transition: .2s;
+        border: 1px solid black;
+    }
+    #team i:hover{
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        color: black;
+    }
+    #teamtwitter:hover{
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        color: black;
+    }
+    #teamfb:hover{
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        color: black;
+    }
+    #teamlinkedin:hover{
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        color: black;
+    }
+    #contact{
+    height: 700px;
+    padding: 0px 0px 0px;
+    background-color: rgb(34, 34, 34);
+    background-image: url(map-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#contact h1{
+        font-size: 2.8em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        padding-top: 100px;
+        color: white;
+        text-transform: uppercase;
+    }
+    #forminput{
+      height: 77px;
+      color: rgb(92, 92, 92);
+      font-weight: 700;
+      /* font-size: 20px; */
+      padding: 10px 20px;
+      box-sizing: border-box;
+      border: 2px solid white;
+      transition: .3s;
+    }
+    #forminput:hover{
+      border: 2px solid black;
+      cursor: pointer;
+    }
+    #formmsg:hover{
+      border: 2px solid black;
+      cursor: pointer;
+    }
+    #formmsg{
+      transition: .3s☻;
+      border: 2px solid white;
+      color: rgb(92, 92, 92);
+      font-weight: 700;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    #formbtn{
+width: 250px;
+height: 75px;
+font-weight: 700;
+margin-top: 50px !important;
+    }
+    @media (max-width: 1020px){
+      #about{
+      height: 1900px;
+    }
+    #teamtwitter2{
+        margin-left: 0px;
+      }
+
+    }
+    @media (min-width:767px) and (max-width: 900px){
+      #teamtwitter2{
+        margin-left: 0px;
+      }
+      #home h2{
+        padding-top: 200px;
+        font-size: 2.5em;
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        box-sizing: border-box;
+    }
+    #home h1{
+        box-sizing: border-box☻;
+        padding-top: 20px;
+        font-size: 3.5em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+    #services{
+      height: 700px;
+    }
+    #portfolio{
+      height: 800px;
+    }
+    #about{
+      height: 1850px;
+    }
+    }
+    @media (max-width: 500px){
+      #teamtwitter2{
+        margin-left: 140px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #mainnav{
+        background-color: #222222 !important;
+      }
+      #home{
+        height: 500px;
+      }
+      #home h2{
+        padding-top: 150px;
+        font-size: 2em;
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        box-sizing: border-box;
+    }
+    #home h1{
+        box-sizing: border-box;
+        padding-top: 20px;
+        font-size: 2.5em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+    #services{
+      height: 1100px;
+    }
+    #portfolio{
+      height: 2700px;
+    }
+    #about{
+      height: 1300px;
+    }
+    .timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 75%;
+    padding: 0 20px 0 100 px;
+    text-align: left;
+}
+    .timeline > .timeline-inverted .timeline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100 px;
+    text-align: left;
+}
+#team{
+  height: 1500px;
+}
+#contact{
+  height: 1100px;
+}
+    }
+  
+    @media (min-width:501px) and (max-width: 766px){
+      #home{
+        height: 500px;
+      }
+      #mainnav{
+        background-color: #222222 !important;
+      }
+      #services{
+      height: 1100px;
+    }
+      #home h2{
+        padding-top: 150px;
+        font-size: 2em;
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        box-sizing: border-box;
+    }
+    #home h1{
+        box-sizing: border-box☻;
+        padding-top: 20px;
+        font-size: 2.5em;
+        font-family: Arial, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+      #teamtwitter2{
+        margin-left: 140px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    #portfolio{
+      height: 3300px;
+    }
+    #about{
+      height: 1300px;
+    }
+    .timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 75%;
+    padding: 0 20px 0 100 px;
+    text-align: left;
+}
+    .timeline > .timeline-inverted .timeline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100 px;
+    text-align: left;
+}
+#team{
+  height: 1500px;
+}
+#contact{
+  height: 1100px;
+}
+    }
+    #mainnav{
+      transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    }
+    .shrink {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: 55px !important;
+        background-color: rgb(34, 34, 34) !important;
+    }
+    .shrink .navbar-brand {
+        height: 0 !important;
+        line-height: 0 !important;
+    }
+    .shrink a {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;       
+    }
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <section id="home">
+        <nav id="mainnav" class="navbar navbar-expand-md bg-transparent navbar-dark text-center fixed-top navbar-shrink">
+            <div class="container">
+                <a class="navbar-brand" id="navlogo" href="#">TeamFolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">SERVICES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#team">TEAM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</nav>
+<h2 class="text-center text-white">Welcome To Our Studio!</h2>
+<h1 class="text-center text-white">It's Nice To Meet You</h1>
+<button class="btn btn-lg bg-warning text-white d-block m-auto" id="homebtn">TELL ME MORE</button>
+</section>
+<section class="container" id="services">
+    <h1 class="text-center font-weight-bold">SERVICES</h1>
+    <p class="text-center" id="svcsp1">Lorem ipsum dolor sit amet consectetur</p>
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+            <div class="imgsetting d-block m-auto">
+                <i class="fa fa-shopping-cart fa-4x text-white" id="ecomicon"> </i>
+            </div>
+            <h2>E-Commerce</h2>
+            <p id="svcp1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor rem harum illum perspiciatis illo facilis perferendis repellendus, amet cumque ut voluptas debitis, vero iste!</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+            <div class="imgsetting d-block m-auto">
+                <i class="fa fa-desktop fa-4x text-white" id="respicon"> </i>
+            </div>
+            <h2>Responsive Design</h2>
+            <p id="svcp1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor rem harum illum perspiciatis illo facilis perferendis repellendus, amet cumque ut voluptas debitis, vero iste!</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+            <div class="imgsetting d-block m-auto">
+                <i class="fa fa-lock fa-4x text-white" id="secicon"> </i>
+            </div>
+            <h2>Web Security</h2>
+            <p id="svcp1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor rem harum illum perspiciatis illo facilis perferendis repellendus, amet cumque ut voluptas debitis, vero iste!</p>
+        </div>
+    </div>
+</section>
+<section class="bg-light" id="portfolio">
+    <div class="container">
+        <h1 class="text-center font-weight-bold">PORTFOLIO</h1>
+        <p class="text-center" id="svcsp1">Lorem ipsum dolor sit amet consectetur</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                  <img src="1.jpg" alt="" class="card-img img-fluid">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Threads</h2>
+                    <p class="card-text"><em>Illustration</em></p>
+                </div>
+              </div>
+            </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                <img src="2.jpg" alt="" class="card-img img-fluid">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Explore</h2>
+                    <p class="card-text"><em>Graphic Design</em></p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+            <div class="card">
+                <img src="3.jpg" alt="" class="card-img img-fluid">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Finish</h2>
+                    <p class="card-text"><em>Identity</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+            <div class="card">
+                <img src="4.jpg" alt="" class="card-img img-fluid">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Lines</h2>
+                    <p class="card-text"><em>Branding</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                <img src="5.jpg" alt="" class="card-img img-fluid">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Southwest</h2>
+                    <p class="card-text"><em>Website Design</em></p>
+                </div>
+              </div>
+            </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                  <img src="6.jpg" alt="" class="card-img img-fluid">
+                  <div class="card-body text-center">
+                      <h2 class="card-title">Window</h2>
+                      <p class="card-text"><em>Photography</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="container">
+        <h1 class="text-center font-weight-bold">ABOUT</h1>
+        <p class="text-center" id="svcsp1">Lorem ipsum dolor sit amet consectetur</p>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="1 (1).jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2009-2011</h4>
+                        <h4 class="subheading">Our Humble Beginnings</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="2 (1).jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>March 2011</h4>
+                        <h4 class="subheading">An Agency is Born</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="3 (1).jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>December 2015</h4>
+                        <h4 class="subheading">Transition to Full Service</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="4 (1).jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>July 2020</h4>
+                        <h4 class="subheading">Phase Two Expansion</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Be Part
+                        <br />
+                        Of Our
+                        <br />
+                        Story!
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="team" class="bg-light">
+    <div class="container">
+        <h1 class="text-center font-weight-bold">OUR AMAZING TEAM</h1>
+        <p class="text-center" id="svcsp1">Lorem ipsum dolor sit amet consectetur</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto text-center">
+                <img src="Majid.png" alt="" class="img-fluid rounded-circle" id="teamimg">
+                <h2>Majid Abid</h2>
+                <p class="text-muted font-weight-bold">Social Media Expert</p>
+                <i class="fa fa-twitter fa-1x" id="teamtwitter"></i>
+                <i class="fa fa-facebook fa-1x" id="teamfb"></i>
+                <i class="fa fa-linkedin fa-1x" id="teamlinkedin"></i>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto text-center">
+                <img src="Abdullah.png" alt="" class="img-fluid rounded-circle" id="teamimg">
+                <h2>Muhammad Abdullah</h2>
+                <p class="text-muted font-weight-bold">Web Developer | WordPress</p>
+                <i class="fa fa-twitter fa-1x" id="teamtwitter"></i>
+                <i class="fa fa-facebook fa-1x" id="teamfb"></i>
+                <i class="fa fa-linkedin fa-1x" id="teamlinkedin"></i>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto text-center">
+                <img src="Umer.png" alt="" class="img-fluid rounded-circle" id="teamimg">
+                <h2>Umer Mehmood</h2>
+                <p class="text-muted font-weight-bold">App Developer | Python Expert</p>
+                <i class="fa fa-twitter fa-1x" id="teamtwitter"></i>
+                <i class="fa fa-facebook fa-1x" id="teamfb"></i>
+                <i class="fa fa-linkedin fa-1x" id="teamlinkedin"></i>
+            </div>
+
+        </div>
+                    <p class="text-muted text-center" style="font-weight: 600; margin-top:50px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos <br> non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        </div>
+        </section>
+        <section class="container" id="clients" style="padding: 30px 0px 30px 35px;">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 m-auto d-block">
+              <img class="img-fluid m-auto" src="clients1.png" alt="">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 m-auto d-block">
+              <img src="clients2.png" alt="" class="img-fluid m-auto">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 m-auto d-block">
+              <img src="clients3.png" alt="" class="img-fluid m-auto">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 m-auto d-block">
+              <img src="clients4.png" alt="" class="img-fluid m-auto">
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <div class="container">
+            <h1 class="text-center font-weight-bold">Contact Us</h1>
+            <p class="text-center" id="svcsp1">Lorem ipsum dolor sit amet consectetur</p>
+            <form action="">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-10 m-auto d-block">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="forminput" placeholder="Your Name*">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="forminput" placeholder="Your Email*">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="forminput" placeholder="Your Phone*">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-10 m-auto d-block">
+                  <div class="form-group">
+                    <textarea name="" id="formmsg" cols="30" rows="10" class="form-control" placeholder="Your Message*"></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <button class="btn btn-lg bg-warning text-white d-block m-auto" id="formbtn" >SEND MESSAGE</button>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="container" style="padding: 20px 0px 10px 0px;">
+
+            <div class="row align-items-center">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-10 text-lg-start text-center">
+              Copyright ©️ TeamFolio by UAMCODES
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-10 " >
+                <i class="fa fa-twitter fa-1x" id="teamtwitter2" ></i>
+                <i class="fa fa-facebook fa-1x" id="teamfb"></i>
+                <i class="fa fa-linkedin fa-1x" id="teamlinkedin"></i>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-10 text-lg-end text-center">
+
+             <a href="#" class="link-dark text-decoration-none" style="color: black;">Privacy Policy </a>
+             <a href="#" class="link-dark text-decoration-none" style="color: black;">Terms Of Use</a>
+
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script>
+             $(document).on("scroll", function(){
+
+if ($(document).scrollTop() > 80){
+    $("#mainnav").addClass("shrink");
+} else {
+    $("#mainnav").removeClass("shrink");
+}
+
+});
+        </script>
+</body>
+</html>
